@@ -22,7 +22,7 @@ function inputDecimal(dot){
         //append the decimal point
         calculator.displayValue += dot;
     }
-}
+};
 
 function handleOperator(nextOperator){
     const { firstOperand, displayValue, operator } = calculator
@@ -50,4 +50,4 @@ function handleOperator(nextOperator){
         '-': (firstOperand, secondOperand) => firstOperand - secondOperand,
         '=': (firstOperand, secondOperand) => secondOperand
     }
-}
+};
