@@ -15,3 +15,11 @@ function inputDigit(digit){
         calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
     }
 }
+
+function inputDecimal(dot){
+    //if the displayValue does not contain a decimal point
+    if(!calculator.displayValue.includes(dot)){
+        //append the decimal point
+        calculator.displayValue += dot;
+    }
+}
