@@ -23,3 +23,20 @@ function inputDecimal(dot){
         calculator.displayValue += dot;
     }
 }
+
+function handleOperator(nextOperator){
+    const { firstOperand, displayValue, operator } = calculator
+    const inputValue = parseInt(displayValue);
+
+    if(operator && calculator.waitingForSecondOperand){
+        calculator.operator = nextOperator;
+        return;
+    }
+
+    if(firstOperand == null){
+        calculator.firstOperand = inputValue;
+    }else if(operator){
+        const currentValue = firstOperand || 0;
+        const result = performCalculation[operator](currentValue, inputValue)
+    }
+}
