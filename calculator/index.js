@@ -42,4 +42,12 @@ function handleOperator(nextOperator){
         calculator.displayValue = string(result);
         calculator.operator = nextOperator;
     }
+
+    const perfomCalculation = {
+        '/': (firstOperand, secondOperand) => firstOperand / secondOperand,
+        '*': (firstOperand, secondOperand) => firstOperand * secondOperand,
+        '+': (firstOperand, secondOperand) => firstOperand + secondOperand,
+        '-': (firstOperand, secondOperand) => firstOperand - secondOperand,
+        '=': (firstOperand, secondOperand) => secondOperand
+    }
 }
