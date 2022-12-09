@@ -72,4 +72,10 @@ keys.addEventListener('click', (event) => {
     if(!target.matches('button')){
         return;
     }
+
+    if(target.classList.contains('operator')){
+        handleOperator(target.value);
+        updateDisplay();
+        return;
+    }
 })
