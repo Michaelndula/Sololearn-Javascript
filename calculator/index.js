@@ -38,5 +38,8 @@ function handleOperator(nextOperator){
     }else if(operator){
         const currentValue = firstOperand || 0;
         const result = performCalculation[operator](currentValue, inputValue)
+
+        calculator.displayValue = string(result);
+        calculator.operator = nextOperator;
     }
 }
