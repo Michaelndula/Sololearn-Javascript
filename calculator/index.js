@@ -78,4 +78,19 @@ keys.addEventListener('click', (event) => {
         updateDisplay();
         return;
     }
+
+    if(target.classList.contains('decimal')){
+        inputDecimal(target.value);
+        updateDisplay();
+        return;
+    }
+
+    if(target.classList.contains('all-clear')){
+        resetCalculator();
+        updateDisplay();
+        return;
+    }
+
+    inputDigit(targe.value)
+    updateDisplay();
 })
