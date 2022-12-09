@@ -58,3 +58,10 @@ function resetCalculator(){
     calculator.waitingForSecondOperand = false;
     calculator.operator = null;
 }
+
+function updateDisplay(){
+    const display = document.querySelector('.calculator-screenshot');
+    display.value = calculator.displayValue;
+}
+
+updateDisplay();
